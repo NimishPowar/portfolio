@@ -1,3 +1,11 @@
+// LOADER LOGIC
+window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+    setTimeout(() => {
+        loader.classList.add('fade-out');
+    }, 1000); // 1s delay for smooth transition
+});
+
 // Smooth scroll for navbar links
 document.querySelectorAll('nav a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
@@ -29,18 +37,31 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Reveal Animations on Scroll
+// Advanced Reveal Animations
 const revealElements = document.querySelectorAll('.reveal');
 
-const listReveal = new IntersectionObserver((entries) => {
+// Group elements to apply staggered delays
+const skillsCards = document.querySelectorAll('.skills-container .skill-card');
+skillsCards.forEach((card, index) => {
+    card.classList.add(`delay-${index + 1}`);
+});
+
+const projectCards = document.querySelectorAll('#projects .project-card');
+projectCards.forEach((card, index) => {
+    card.classList.add(`delay-${index + 1}`);
+});
+
+const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('active');
+            // Unobserve once revealed for better performance
+            revealObserver.unobserve(entry.target);
         }
     });
-}, { threshold: 0.1 });
+}, { threshold: 0.15 });
 
 revealElements.forEach(element => {
-    listReveal.observe(element);
+    revealObserver.observe(element);
 });
 
