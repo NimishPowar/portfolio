@@ -299,6 +299,13 @@ nav a:hover::after {
     font-weight: 500;
 }
 
+.project-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
 .project-link {
     display: inline-flex;
     align-items: center;
@@ -312,6 +319,10 @@ nav a:hover::after {
     font-size: 0.95rem;
     box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
     transition: var(--transition-fast);
+}
+
+.project-links .project-link {
+    margin-top: 0;
 }
 
 .project-link:hover {

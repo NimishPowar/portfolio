@@ -19,7 +19,7 @@ I'm **Nimish Powar**, an aspiring Backend Developer and ML & Data Enthusiast. Cu
 ## 📁 Projects Featured
 - **[Human Comfort Index (HCI)](https://github.com/NimishPowar/HumanComfortIndex):** Evaluates human comfort levels based on environmental parameters.
 - **[Student Dropout Prediction System](https://github.com/soham-limhan/Collegedropoutprediction):** A Flask app using Logistic Regression to predict student dropout risks.
-- **[Linked List Visualizer](https://github.com/NimishPowar/LinkedList-Visualizer):** Desktop GUI built with PyQt5 to visualize linked list operations.
+- **[LinkView — Linked List Visualizer](https://nimishpowar.github.io/LinkView-LinkedListVisualizer/):** A high-end interactive web visualizer for linked list data structures.
 - **[Portfolio Website](https://github.com/NimishPowar/portfolio):** This website itself, designed with modern aesthetics and smooth animations.
 
 ## ✨ Key Features
