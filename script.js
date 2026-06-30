@@ -18,6 +18,7 @@ document.querySelectorAll('nav a[href^="#"]').forEach(link => {
 // Active Link Highlighting on Scroll
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('nav ul li a');
+const nav = document.querySelector('nav');
 
 window.addEventListener('scroll', () => {
     let current = '';
@@ -35,6 +36,12 @@ window.addEventListener('scroll', () => {
             link.classList.add('active');
         }
     });
+
+    if (window.scrollY > 20) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
 });
 
 // Advanced Reveal Animations

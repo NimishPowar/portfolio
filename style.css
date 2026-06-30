@@ -64,6 +64,17 @@ nav {
     background: rgba(2, 6, 23, 0.8);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background var(--transition-fast), padding var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+nav.scrolled {
+    padding: 1rem 8%;
+    background: rgba(2, 6, 23, 0.95);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+nav.scrolled .logo {
+    font-size: 1.35rem;
 }
 
 .logo {
